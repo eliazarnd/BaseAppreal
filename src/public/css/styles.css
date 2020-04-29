@@ -1,0 +1,265 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --mobile: @media Screen (min-width: 375px);
+    --desktop: @media Screen (min-width: 1440px);
+    
+    /*Primary Colors*/
+
+    --desaturatedRed: hsl(0, 36%, 70%);
+    --desaturatedRedModify: hsla(0, 36%, 70%, 60%);
+    --softRed: hsl(0, 93%, 68%);
+
+    /*Neutral*/
+    --darkGrayishRed: hsl(0, 6%, 24%);
+}
+
+.background{
+    position: absolute;
+    width: 60%;
+    height: 100vh;
+    z-index: -1;
+    background-image: url("../../../images/bg-pattern-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header{
+    padding: 30px;
+}
+
+.logo{
+    min-width: 10em;
+}
+
+.hero-image > img {
+    min-width: 100%;
+}
+
+.hero-image{
+    width: 100%;
+}
+
+
+.main-section{
+    padding: 30px;
+}
+
+.grid-container{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+}
+
+.title-container{
+    margin-top: 2em;
+}
+
+.title-container > h1{
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    font-weight:600;
+    letter-spacing: 10px;
+}
+
+.title-modify{
+    font-weight: 200;
+    color: var(--desaturatedRedModify);
+}
+
+.main-message{
+    line-height: 1.5;
+    color: var(--desaturatedRed);
+    text-align: center;
+}
+
+.input-email{
+    padding: 20px;
+    border: none;
+    outline: none;
+    border: 1px solid  var(--desaturatedRed);
+    border-radius: 50px;
+    width: 100%;
+    position: relative;
+    opacity: 0.5;
+    font-size: 1em;
+    font-weight: 600;
+}
+.input-email::placeholder{
+    color: var(--desaturatedRed);
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.component-container{
+    
+    position: relative;
+    width: 100%;
+}
+
+.btn{
+    position: absolute;
+    top: 0;
+    border: none;
+    padding: 15px;
+    width: 80px;
+    height: 100%;
+    right: 0;
+    border-radius: 50px 50px 50px 50px;
+    background: linear-gradient( to right,hsl(0, 80%, 86%) , hsl(0, 74%, 74%));
+    box-shadow: 0 0 15px var(--desaturatedRed) ;
+}
+
+
+.btn:hover{
+    cursor: pointer;
+    background: linear-gradient( to left, hsl(0, 60%, 90%) , hsl(0, 60%, 84%));
+    box-shadow: 0 0 15px var(--desaturatedRed) ;
+}
+
+.icon-error{
+    display: none;
+    position: absolute;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.error-message{
+    display: none;
+    margin: 0;
+    margin-top: 10px;
+    font-size: 0.8em;
+    margin-left: 30px;
+    color: var(--softRed);
+    position: absolute;
+}
+
+.icon-error.activate-error, .error-message.activate-error {
+    display: block;
+}
+
+.input-email.activate-error{
+    border: none;
+    outline: none;
+    border: 2px solid  red;
+}
+
+
+
+@media screen and (min-width: 1440px){
+
+    .logo{
+        height: 30px;
+    }
+
+    header{
+        padding-top: 8%;
+        display: flex;
+        align-content: center;
+        margin-left: 19%;
+    }
+
+    .grid-container{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: repeat(3, 200px) 1fr;
+        grid-auto-rows: 1fr;
+    }
+
+    .hero-image > img {
+        display: none;
+    }
+
+    .hero-image{
+        background-color: var(--desaturatedRed);
+        background-image: url("../../../images/hero-desktop.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-column: 2 / -1;
+        grid-row: span 5;
+    }
+
+    .title-container{
+        margin-top: 5em;
+    }
+
+    .component-container{
+        margin-top: 1em;
+    }
+
+    .title-container > h1{
+        margin: 0;
+        font-size: 4.5em;
+        font-weight:600;
+        letter-spacing: 20px;
+        text-align: left;
+    }
+
+    .main-message{
+        line-height: 1.5;
+        font-size: 1.1em;
+        display: inline-block;
+        text-align: left;
+        align-self: center;
+    }
+
+
+    .input-email{
+        padding-left: 30px;
+        width: 90%;
+        
+    }
+
+    .icon-error{
+        right: 170px;
+    }
+
+    .btn{
+        position: absolute;
+        top: 0;
+        border: none;
+        padding: 15px;
+        width: 100px;
+        height: 100%;
+        right: 0;
+        transform: translateX(-50%);
+        border-radius: 50px 50px 50px 50px;
+    }
+    
+    .container{
+        height: 100%;
+        grid-row: span 4;
+        justify-content: start;
+        width: 65%;
+        margin: 0 auto;
+    }
+
+    .component-container{
+        position: relative;
+        width: 100%;
+    }
+    
+   
+
+
+}

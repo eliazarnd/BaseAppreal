@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Base Appareal Coming soon</title>
+  <link rel="stylesheet" href="./src/public/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class = "background">
+
+  </div>
+
+  <div class="grid-container">
+
+    <header>
+      <img class="logo" src="./images/logo.svg" alt="">
+    </header>
+
+    <section class="hero-image">
+      <img srcset="
+  ./images/hero-mobile.jpg 1x, 
+  ./images/hero-desktop.jpg 1x
+" alt="…">
+    </section>
+
+      <div class="container">
+        <div class="title-container">
+          <h1 class="main-title"><span class="title-modify">We're</span>
+          </h1>
+          <h1>Coming</h1>
+          <h1>Soon</h1>
+        </div>
+
+        <p class="main-message">Hello fellow shoppers! We're currently building our new fashion store. Add your email
+          below to stay up-to-date with announcemts and our launch deals.</p>
+
+        <form class="component-container">
+          <input type="email" placeholder="Email Address" class="input-email" value=" " required
+          maxlength="30">
+          <button class="btn"><span><img src="./images/icon-arrow.svg" alt="" srcset=""></span></button>
+          <img class = "icon-error" src="./images/icon-error.svg" alt="" srcset="">
+          <p class = "error-message">please enter a valid email</p>
+        </form>
+      </div>
+  </div>
+  
+  <script src="./src/js/validate.js"></script>
+</body>
+  
+</html>
